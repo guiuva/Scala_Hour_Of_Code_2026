@@ -1,15 +1,15 @@
-#  Taller Introductorio de Scala para Big Data
+#Taller Introductorio de Scala para Big Data
 
 Organizado por el **Grupo Universitario de Informática (GUI)**.
 
 * **Ponente:** Manuel Méndez Calvo ([manuel.men.calvo@gmail.com](mailto:manuel.men.calvo@gmail.com))
-* **Fecha:** 24/11/2026
+* **Fecha:** 17/11/2026
 * **Duración estimada:** 1,5 horas
 * **Modalidad:** Práctica con portátil propio
 
 ---
 
-## 📖 Descripción y público objetivo
+##  Descripción y público objetivo
 
 Este es un taller introductorio a **Scala**, un lenguaje multiparadigma con un fuerte enfoque en la **programación funcional**, ampliamente utilizado en el ecosistema de procesamiento distribuido y Big Data.
 
@@ -51,12 +51,26 @@ Descarga e instala IntelliJ IDEA desde la [página oficial de JetBrains](https:/
 
 ---
 
-## ⚡ Configuración opcional (Recomendada para el taller de Spark)
+##  Configuración opcional (Recomendada para el taller de Spark)
 
 Si quieres dejar tu entorno listo para probar Apache Spark desde ya (o para venir al taller avanzado), sigue estos dos pasos adicionales:
 
 ### 5. Añadir dependencias en `build.sbt`
-En el panel izquierdo de IntelliJ, abre el archivo `build.sbt` y sustituye su contenido por el siguiente:
+En el panel izquierdo de IntelliJ, abre el archivo `build.sbt` y sustituye su contenido por el código facilitado en el **Anexo 1**.
+
+Tras guardar el archivo, aparecerá un **icono flotante de SBT** en la esquina superior derecha del editor; púlsalo para recargar los cambios y descargar las librerías automáticamente.
+
+### 6. Prueba de funcionamiento ("Hello World")
+1. Navega en el panel izquierdo hasta `src > main > scala`.
+2. Haz clic derecho sobre `scala`, selecciona **New > Package** y llámalo `com.taller` (o el nombre que prefieras).
+3. Haz clic derecho sobre el paquete creado, selecciona **New > Scala Class**, elige el tipo **Object** y llámalo `MainSpark`.
+4. Copia y pega el código de prueba del **Anexo 2** y ejecútalo para comprobar que todo funciona.
+
+---
+
+##  Anexos
+
+### Anexo 1 (`build.sbt`)
 
 ```scala
 name := "taller-spark-scala"
@@ -71,13 +85,7 @@ libraryDependencies ++= Seq(
 )
 ```
 
-Tras guardar el archivo, aparecerá un **icono flotante de SBT** en la esquina superior derecha del editor; púlsalo para recargar los cambios y descargar las librerías automáticamente.
-
-### 6. Prueba de funcionamiento ("Hello World")
-1. Navega en el panel izquierdo hasta `src > main > scala`.
-2. Haz clic derecho sobre `scala`, selecciona **New > Package** y llámalo `com.taller` (o el nombre que prefieras).
-3. Haz clic derecho sobre el paquete creado, selecciona **New > Scala Class**, elige el tipo **Object** y llámalo `MainSpark`.
-4. Pega el siguiente código y ejecútalo para comprobar que todo funciona:
+### Anexo 2 (`MainSpark.scala`)
 
 ```scala
 package com.taller
